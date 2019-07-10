@@ -16,7 +16,16 @@ namespace JuegoVida
         public bool sigueViva(bool estadoActual, int numCelulas)
         {
 
-            throw new Exception("No implementado");
+            bool state = estadoActual;
+            if (!estadoActual && numCelulas == 3)
+            {
+                state = true;
+            }
+            if (estadoActual && (numCelulas <= 1 || numCelulas >= 4))
+            {
+                state = false;
+            }
+            return state;
 
         }
     }

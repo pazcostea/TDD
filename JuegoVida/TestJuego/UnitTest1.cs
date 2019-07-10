@@ -64,7 +64,7 @@ namespace Tests
         public void EstaMuerta2()
         {
             bool estadoActual = false;
-            int numCelulas = 1;
+            int numCelulas = 2;
             Juego celulas = new Juego();
             bool c = celulas.sigueViva(estadoActual, numCelulas);
             Assert.IsFalse(c, "Está muerta");
@@ -73,7 +73,7 @@ namespace Tests
         public void EstaMuerta3()
         {
             bool estadoActual = true;
-            int numCelulas = 1;
+            int numCelulas = 3;
             Juego celulas = new Juego();
             bool c = celulas.sigueViva(estadoActual, numCelulas);
             Assert.IsTrue(c, "Está viva");
@@ -82,7 +82,7 @@ namespace Tests
         public void EstaMuerta4()
         {
             bool estadoActual = false;
-            int numCelulas = 5;
+            int numCelulas = 4;
             Juego celulas = new Juego();
             bool c = celulas.sigueViva(estadoActual, numCelulas);
             Assert.IsFalse(c, "Está muerta");
