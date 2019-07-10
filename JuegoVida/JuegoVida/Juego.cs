@@ -15,18 +15,12 @@ namespace JuegoVida
         int nCelulas;
         public bool sigueViva(bool estadoActual, int numCelulas)
         {
-
             bool state = estadoActual;
-            if (!estadoActual && numCelulas == 3)
+            if ((!estadoActual && numCelulas == 3) || (estadoActual && (numCelulas <= 1 || numCelulas >= 4)))
             {
-                state = true;
-            }
-            if (estadoActual && (numCelulas <= 1 || numCelulas >= 4))
-            {
-                state = false;
+                state = !state;
             }
             return state;
-
         }
     }
 }
